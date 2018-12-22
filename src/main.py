@@ -24,6 +24,7 @@ else:
         while not t.terminate():
             t.train()
             t.test()
+            torch.cuda.empty_cache()
 
         checkpoint.done()
 
